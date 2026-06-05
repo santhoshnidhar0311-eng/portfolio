@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of S. Santhosh, a B.Tech Computer Science Engineering student (2024-2028). Showcasing technical skills, academic projects, certificates, and achievements in software engineering and web development.">
+    <meta name="author" content="S. Santhosh">
+    <title>S. Santhosh | CSE Student Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=1.2">
+    
+    <!-- JS Data (loads first so variables are available) -->
+    <script src="portfolio-data.js?v=1.2" defer></script>
+    <!-- JS Control Logic -->
+    <script src="script.js?v=1.2" defer></script>
+</head>
+<body class="dark-theme">
+    
+    <!-- Canvas for Floating Antigravity Particles -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="logo-link">
+                <span class="logo-accent">&lt;</span>Santhosh<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#certifications" class="nav-link">Certificates</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        
+        <!-- 1. Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-pretitle">Welcome to my space</span>
+                    <h1 class="hero-title" id="profile-name">S. Santhosh</h1>
+                    <div class="hero-subtitle">
+                        <span class="typing-text" id="typing-text"></span><span class="typed-cursor">|</span>
+                    </div>
+                    <p class="hero-tagline" id="profile-tagline">Passionate about Software Development, Web Development, and Problem Solving.</p>
+                    
+                    <div class="hero-cta-buttons">
+                        <a href="resume.html" class="btn btn-primary" id="hero-resume-btn" target="_blank">
+                            <i class="fa-solid fa-file-invoice icon-left"></i>View Resume
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-regular fa-envelope icon-left"></i>Contact Me
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Zero-Gravity CSS Orbital Graphics -->
+                <div class="hero-visual">
+                    <div class="space-orb-container">
+                        <div class="core-orb"></div>
+                        <div class="orbital-ring ring-1">
+                            <div class="planet planet-1"></div>
+                        </div>
+                        <div class="orbital-ring ring-2">
+                            <div class="planet planet-2"></div>
+                        </div>
+                        <div class="orbital-ring ring-3">
+                            <div class="planet planet-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll down">
+                    <span class="mouse">
+                        <span class="wheel"></span>
+                    </span>
+                    <span class="arrow-down"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section -->
+        <section class="about-section section-padding" id="about">
+            <div class="container">
+                <h2 class="section-title text-center">About Me</h2>
+                <div class="section-divider"></div>
+                
+                <div class="about-grid">
+                    <!-- Glassmorphic Details Card -->
+                    <div class="about-card scroll-reveal">
+                        <div class="about-stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                                <div class="stat-details">
+                                    <span class="stat-title">Education</span>
+                                    <span class="stat-value">B.Tech CSE</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon"><i class="fa-solid fa-calendar-days"></i></span>
+                                <div class="stat-details">
+                                    <span class="stat-title">Batch</span>
+                                    <span class="stat-value" id="about-years">2024 - 2028</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon"><i class="fa-solid fa-chart-line"></i></span>
+                                <div class="stat-details">
+                                    <span class="stat-title">CGPA</span>
+                                    <span class="stat-value" id="about-cgpa">9.2 / 10.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="about-details-list">
+                            <li>
+                                <span class="detail-label"><i class="fa-solid fa-university"></i> College:</span>
+                                <span class="detail-value" id="about-college">Loading...</span>
+                            </li>
+                            <li>
+                                <span class="detail-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                                <span class="detail-value" id="about-email"><a href="mailto:your-email@example.com">your-email@example.com</a></span>
+                            </li>
+                            <li>
+                                <span class="detail-label"><i class="fa-solid fa-phone"></i> Phone:</span>
+                                <span class="detail-value" id="about-phone">+91 XXXXX XXXXX</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Bio Statement -->
+                    <div class="about-bio scroll-reveal">
+                        <h3 class="bio-heading">Aspiring Software Engineer</h3>
+                        <p class="bio-text" id="about-description">Loading biography details...</p>
+                        
+                        <div class="bio-interests">
+                            <span class="interest-tag"><i class="fa-solid fa-code"></i> Software Development</span>
+                            <span class="interest-tag"><i class="fa-solid fa-layer-group"></i> Full Stack Development</span>
+                            <span class="interest-tag"><i class="fa-solid fa-brain"></i> Problem Solving</span>
+                        </div>
+                        
+                        <div class="bio-cta">
+                            <a href="resume.html" class="btn btn-primary" id="about-resume-btn" target="_blank">
+                                <i class="fa-solid fa-file-invoice icon-left"></i>View Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section class="skills-section section-padding" id="skills">
+            <div class="container">
+                <h2 class="section-title text-center">My Skills</h2>
+                <div class="section-divider"></div>
+                
+                <div class="skills-container" id="skills-container">
+                    <!-- Skills Category Grids rendered dynamically by script.js -->
+                    <div class="skills-loading text-center">Loading skills database...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section -->
+        <section class="projects-section section-padding" id="projects">
+            <div class="container">
+                <h2 class="section-title text-center">Featured Projects</h2>
+                <div class="section-divider"></div>
+                
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects dynamic rendering -->
+                    <div class="projects-loading text-center">Loading projects data...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Education Section -->
+        <section class="education-section section-padding" id="education">
+            <div class="container">
+                <h2 class="section-title text-center">Education</h2>
+                <div class="section-divider"></div>
+                
+                <div class="timeline-container" id="education-timeline">
+                    <!-- Timeline items dynamic rendering -->
+                    <div class="education-loading text-center">Loading academic history...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Certifications Section -->
+        <section class="certifications-section section-padding" id="certifications">
+            <div class="container">
+                <h2 class="section-title text-center">Certifications</h2>
+                <div class="section-divider"></div>
+                
+                <div class="certifications-grid" id="certifications-grid">
+                    <!-- Certificates dynamic rendering -->
+                    <div class="certifications-loading text-center">Loading credentials...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Achievements Section -->
+        <section class="achievements-section section-padding" id="achievements">
+            <div class="container">
+                <h2 class="section-title text-center">Achievements</h2>
+                <div class="section-divider"></div>
+                
+                <div class="achievements-grid" id="achievements-grid">
+                    <!-- Achievements dynamic rendering -->
+                    <div class="achievements-loading text-center">Loading milestones...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact Section -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container">
+                <h2 class="section-title text-center">Get In Touch</h2>
+                <div class="section-divider"></div>
+                
+                <div class="contact-grid">
+                    <!-- Contact Information Cards -->
+                    <div class="contact-info scroll-reveal">
+                        <h3>Contact Info</h3>
+                        <p class="contact-info-subtitle">Feel free to reach out to me for internship opportunities, collaborations, or technical projects.</p>
+                        
+                        <div class="contact-card-list">
+                            <div class="contact-info-card">
+                                <span class="card-icon"><i class="fa-solid fa-envelope"></i></span>
+                                <div class="card-info-content">
+                                    <span class="info-label">Email Me</span>
+                                    <span class="info-value" id="contact-email"><a href="mailto:your-email@example.com">your-email@example.com</a></span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-card">
+                                <span class="card-icon"><i class="fa-solid fa-phone"></i></span>
+                                <div class="card-info-content">
+                                    <span class="info-label">Call Me</span>
+                                    <span class="info-value" id="contact-phone">+91 XXXXX XXXXX</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-card">
+                                <span class="card-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <div class="card-info-content">
+                                    <span class="info-label">Location</span>
+                                    <span class="info-value">Tamil Nadu, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Profile Badges -->
+                        <div class="social-links-container">
+                            <a href="#" class="social-btn linkedin-btn" id="contact-linkedin" target="_blank" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-btn github-btn" id="contact-github" target="_blank" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-form-container scroll-reveal">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" class="contact-form" autocomplete="on">
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="form-name" class="form-label">Full Name</label>
+                                    <input type="text" id="form-name" class="form-input" placeholder="e.g. S. Santhosh" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email" class="form-label">Email Address</label>
+                                    <input type="email" id="form-email" class="form-input" placeholder="e.g. name@domain.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject" class="form-label">Subject</label>
+                                <input type="text" id="form-subject" class="form-input" placeholder="Collaboration / Job Opportunity" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message" class="form-label">Message</label>
+                                <textarea id="form-message" class="form-input" rows="5" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary form-submit-btn" id="form-submit-btn">
+                                <span>Send Message</span><i class="fa-solid fa-paper-plane icon-right"></i>
+                            </button>
+                            
+                            <!-- Form submission states -->
+                            <div class="form-status" id="form-status" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; <span id="copyright-year">2026</span> S. Santhosh. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" class="footer-social-link" id="footer-linkedin" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="footer-social-link" id="footer-github" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. Santhosh - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-text: #111827;
+            --color-text-muted: #4b5563;
+            --color-primary: #1d4ed8;
+            --color-border: #d1d5db;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text);
+            background-color: #f3f4f6;
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .resume-page {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        .print-btn-container {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: var(--color-primary);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #1e40af;
+            transform: translateY(-1px);
+        }
+
+        .btn-back {
+            color: var(--color-text-muted);
+            background-color: #e5e7eb;
+            box-shadow: none;
+        }
+
+        .btn-back:hover {
+            background-color: #d1d5db;
+            color: var(--color-text);
+        }
+
+        /* Resume formatting */
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-bottom: 5px;
+        }
+
+        .links-info {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .links-info a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .links-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--color-text);
+            padding-bottom: 3px;
+            margin-bottom: 12px;
+            letter-spacing: 0.05em;
+        }
+
+        .summary-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .edu-item, .project-item, .cert-item {
+            margin-bottom: 15px;
+        }
+
+        .edu-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .edu-sub, .project-sub {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+        }
+
+        .bullet-list {
+            margin-left: 20px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .bullet-list li {
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px 30px;
+            font-size: 0.95rem;
+        }
+
+        .skill-item {
+            display: flex;
+        }
+
+        .skill-category {
+            font-weight: 700;
+            min-width: 180px;
+        }
+
+        .skill-values {
+            color: var(--color-text-muted);
+        }
+
+        /* Hide elements on print */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .resume-page {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .print-btn-container {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Printable Header Buttons -->
+    <div class="print-btn-container">
+        <a href="index.html" class="btn btn-back">
+            <i class="fa-solid fa-arrow-left icon-left"></i>Back to Portfolio
+        </a>
+        <button onclick="window.print()" class="btn">
+            <i class="fa-solid fa-print icon-left"></i>Print Resume / Save as PDF
+        </button>
+    </div>
+
+    <!-- Resume Body -->
+    <div class="resume-page">
+        <header>
+            <h1>S. Santhosh</h1>
+            <div class="contact-info">
+                Virudhunagar, Tamil Nadu, India
+            </div>
+            <div class="contact-info">
+                +91 81227 95505 | <a href="mailto:santhoshnidhar0311@gmail.com" style="color: var(--color-text); text-decoration: none;">santhoshnidhar0311@gmail.com</a>
+            </div>
+            <div class="links-info">
+                <span><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/santhosh-s-santhosh03111" target="_blank">linkedin.com/in/santhosh-s-santhosh03111</a></span>
+                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/santhoshnidhar0311-eng" target="_blank">github.com/santhoshnidhar0311-eng</a></span>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary-text">
+                Dedicated Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning with a CGPA of 9.0. Proficient in Java, Python, HTML, CSS, Flask, and MySQL with hands-on experience building AI-driven applications including a triage classification system and a portfolio management tool. Proven track record in competitive hackathons, including winning a 12-hour hackathon and ranking in the top 10 in an AI healthcare challenge. Seeking opportunities to apply AI/ML expertise in real-world software development.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="edu-item">
+                <div class="edu-header">
+                    <span>Bachelor of Technology – Computer Science Engineering (AI & ML)</span>
+                    <span>Aug 2024 – May 2028</span>
+                </div>
+                <div class="edu-sub">
+                    <span>SRM Institute of Science and Technology, Trichy</span>
+                    <span>CGPA: 9.0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span class="skill-category">Programming Languages:</span>
+                    <span class="skill-values">Java, Python</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Web Technologies:</span>
+                    <span class="skill-values">HTML, CSS</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Frameworks & Databases:</span>
+                    <span class="skill-values">Flask, MySQL</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Tools & Platforms:</span>
+                    <span class="skill-values">Git, GitHub</span>
+                </div>
+                <div class="skill-item" style="grid-column: span 2;">
+                    <span class="skill-category">Domains:</span>
+                    <span class="skill-values">Artificial Intelligence, Machine Learning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span>AI-Based Triage System for Emergency Departments</span>
+                    <span>2024</span>
+                </div>
+                <ul class="bullet-list">
+                    <li>Designed and developed an AI-driven triage system to classify and prioritize emergency patients based on symptom severity and clinical indicators.</li>
+                    <li>Applied machine learning algorithms to automate patient risk assessment, reducing manual triage time and improving accuracy.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <span>Portfolio Management System | Flask, MySQL, HTML/CSS</span>
+                    <span>2026</span>
+                </div>
+                <ul class="bullet-list">
+                    <li>Built a stock portfolio tracking web application with user-friendly dashboards.</li>
+                    <li>Integrated MySQL database for storing and retrieving investment data.</li>
+                    <li>Developed frontend using HTML/CSS and backend using Python Flask.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <span>Simulation of Modern Traffic Control System</span>
+                    <span>2025</span>
+                </div>
+                <ul class="bullet-list">
+                    <li>Developed a traffic control system simulation to model and manage vehicle flow at intersections using automated signal control logic.</li>
+                    <li>Designed the system to optimize traffic throughput and reduce congestion using rule-based automation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+            <h2 class="section-title">Certifications</h2>
+            <ul class="bullet-list" style="margin-left: 20px;">
+                <li>Introduction to AI – Google (via Coursera)</li>
+                <li>Ethical Hacking Virtual Internship – EduSkills Academy / AICTE</li>
+                <li>Python Programming Virtual Internship – CodSoft</li>
+            </ul>
+        </section>
+
+        <!-- Achievements & Awards -->
+        <section>
+            <h2 class="section-title">Achievements & Awards</h2>
+            <ul class="bullet-list" style="margin-left: 20px;">
+                <li><strong>Hackathon Winner</strong> – Won a 12-hour hackathon conducted by Coimbatore Institute of Technology.</li>
+                <li><strong>Top 10 Finish</strong> – Ranked in the top 10 at an AI in Healthcare national-level hackathon.</li>
+                <li><strong>Smart India Hackathon Participant</strong> – Selected to participate in the prestigious Smart India Hackathon.</li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
