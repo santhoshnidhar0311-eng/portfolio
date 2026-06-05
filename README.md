@@ -32,7 +32,7 @@ You **do not need** to edit complex HTML code to change your details. All the te
 ### 1. Update Personal Data
 Open [portfolio-data.js](file:///c:/Users/deepa/OneDrive/Desktop/summa/Personal portfolio/portfolio-data.js) in your text editor (like VS Code) and update the values inside the `PORTFOLIO_DATA` object:
 *   **Name & College**: Replace `"Your College / University Name"` with your actual college.
-*   **CGPA**: Change `"9.2 / 10.0"` to your current CGPA.
+*   **CGPA**: Change `"9.0/ 10.0"` to your current CGPA.
 *   **Contact Info**: Edit email, phone number, and social profiles (LinkedIn and GitHub).
 *   **About Me**: Customize the biography text to match your goals.
 *   **Skills**: Add or remove items from the skill badges. Follow the existing template if adding new skills.
